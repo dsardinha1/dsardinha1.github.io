@@ -3,9 +3,130 @@
 <head>
     <meta charset="utf-8">
     <title>Front of Davina's Webpage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    #script for importing all of FontAwesome Icons
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <style>
+        html, body{
+            padding: 30px;
+            background-color: black;
+            color: whitesmoke;
+            text-shadow: 2px 2px 4px black;
+        }
+        #backgroundVideo{
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%; 
+                min-height: 100%;
+            }
+        .row{
+            position: relative;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24pt;
+        }
+        #menu{
+            background: rgba(192, 192, 192, 0.3);
+        }
+        #first:hover{
+            text-shadow: 5px 5px 10px black;
+        }
+        #second_link{
+            color:white;
+            text-decoration: none;
+        }
+        #second:hover{
+            text-shadow: 5px 5px 10px black;
+        }
+        #third:hover{
+            text-shadow: 5px 5px 10px black;
+        }
+        #fourth:hover{
+            text-shadow: 5px 5px 10px black;
+        }
+        #message{
+            text-align: right;
+            margin-top: 15vh;
+            margin-left: 40vw;
+        }
+        #myPhoto{
+            content:url("images/selfie.jpg");
+            width: 213;
+            height: 378;
+            margin-top: 10vh;
+            margin-left: 5vw;
+            border: 5px solid silver;
+            box-sizing: border-box;
+            padding: 5px;
+            box-shadow: 10px 10px 5px black;
+
+        }
+        #heading{
+            font-size: 42pt;
+        }
+        #content{
+            margin-top: 10vh;
+            font-size: 18pt;
+        }
+        @media (max-width: 1000px){
+            #myPhoto {display: none;}
+        }
+        @media (max-width: 700px){
+            .container-fluid{
+                flex-direction: column;
+            }
+            #myPhoto {display: none;}
+            #message{
+                text-align: center;
+                margin-top: 15vh;
+                margin-left: 10vw;
+            }
+        }
+
+    </style>
     </head>
 <body>
     <!--This is a comment-->
-    <h1>Davina Sardinha</h1>
+    <div class = "container-fluid">
+            <div class="videoBG">
+                    <video autoplay muted loop id="backgroundVideo">
+                            <source src="videos/forest.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            <div class = "row" id = "menu">
+                    <div class = 'col-sm-3 col-lg-3' id = "first"><i class="fas fa-home"></i> Home</div>
+                    <div class = 'col-sm-3 col-lg-3' id = "second"><i class="far fa-file"></i><a href="docs/bsu_resume.pdf" id="second_link"> Resume</a></div>
+                    <div class = 'col-sm-3 col-lg-3' id = "third"><i class="fas fa-paint-brush"></i> Hobbies</div>
+                    <div class = 'col-sm-3 col-lg-3'id = "fourth"><i class="fas fa-tv"></i> Work</div>
+            </div>
+            <div class = "row">
+                <div id = "message">
+                            <h1 id = "heading">About Me</h1>
+                            <div>Being Davina Sardinha</div>
+                </div>
+                <div id="myPhoto"></div>    
+ 
+            </div>
+            <div class = "row" id = "content">
+                    <div class = 'col-lg-6'>
+                        <p>I am a senior at Bridgewater State University and anticipate to graduate with my bachelor's degree in 
+                            Computer Science in the spring of 2020. Once I graduate, my future plans is to get my master's degree
+                            in Bioinformatics or Data Science and to work in Boston for a major research organization. Some members in my 
+                            family from outside the United States, who have doctorate degrees, work in the biomedical field in cancer research and I plan to follow them in their footsteps.
+                        </p>
+                    </div>
+                    <div class = 'col-lg-6'>
+                        <p>As a person, I am very diligent and hardworking when it
+                            comes to any given task. I will see it through the end and pour my soul into a project from the start. When I'm not working 
+                            or being a computer nerd, I can be seen with my family, doing oneof my many hobbies, or helping someone!
+                        </p>
+                    </div>
+            </div>
+    </div>
+    
     </body>
 </html>
